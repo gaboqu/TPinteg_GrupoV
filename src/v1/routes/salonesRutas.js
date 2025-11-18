@@ -5,12 +5,13 @@ import validarCampos from '../../middlewares/validarCampos.js';
 import SalonesControlador from '../../controllers/salonesControlador.js';
 
 const salonesControlador = new SalonesControlador();
+// apicache
+// apicache.options({ debug: true }); 
 
 const router = express.Router();
-let cache = apicache.middleware
 
-router.get('/', cache('5 minutes') ,salonesControlador.buscarTodos);
-router.get('/:salon_id', salonesControlador.buscarPorID);
+router.get('/', apicache.middleware('5 minutes'), salonesControlador.buscarTodos);
+router.get('/:salon_id', apicache.middleware('2 minutes'),salonesControlador.buscarPorID);
 router.put('/:salon_id', salonesControlador.modificar);
 router.post('/', 
     [

@@ -5,11 +5,12 @@ meta {
 }
 
 get {
-  url: {{apiUrl}}/notificacion
+  url: {{apiUrl}}/api/v1/salones
   body: none
   auth: inherit
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

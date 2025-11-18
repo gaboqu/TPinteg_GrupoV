@@ -1,5 +1,4 @@
 import express from 'express';
-import apicache from 'apicache';
 // import handlebars from 'handlebars';
 // import nodemailer from 'nodemailer';
 // import { fileURLToPath } from 'url';
@@ -10,8 +9,7 @@ import apicache from 'apicache';
 //importo rutas
 import { router as v1SalonesRutas } from './v1/routes/salonesRutas.js';
 
-// apicache
-// apicache.options({ debug: true }); 
+
 
 // Creo la app de express
 const app = express();
@@ -20,7 +18,7 @@ const app = express();
 app.use(express.json());
 
 // Defino las rutas
-app.use('/api/v1/salones', apicache.middleware('5 minutes'), v1SalonesRutas);
+app.use('/api/v1/salones', v1SalonesRutas);
 
 export default app;
 

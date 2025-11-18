@@ -4,12 +4,13 @@ meta {
   seq: 7
 }
 
-patch {
-  url: {{apiUrl}}/salones/
+delete {
+  url: {{apiUrl}}/salones/9
   body: none
   auth: inherit
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

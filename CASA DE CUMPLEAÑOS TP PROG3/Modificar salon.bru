@@ -5,11 +5,21 @@ meta {
 }
 
 put {
-  url: {{apiUrl}}/salones/
-  body: none
+  url: {{apiUrl}}/salones/9
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+      "titulo":"Epic Jham",
+      "direccion":"Brasil 531",
+      "capacidad":100,
+      "importe":80000
+  }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

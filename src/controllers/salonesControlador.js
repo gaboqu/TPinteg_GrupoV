@@ -9,7 +9,7 @@ export default class SalonesControlador {
 
         try {
        
-            const salones = await this.salonesServicio.buscarTodosTodos();
+            const salones = await this.salonesServicio.buscarTodos();
 
        
            res.json({ 
