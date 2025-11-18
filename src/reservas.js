@@ -22,6 +22,8 @@ app.use(express.json());
 // Defino las rutas
 app.use('/api/v1/salones', apicache.middleware('5 minutes'), v1SalonesRutas);
 
+export default app;
+
 
 
 
@@ -282,10 +284,10 @@ app.use('/api/v1/salones', apicache.middleware('5 minutes'), v1SalonesRutas);
 
   // Cargar variables de entorno desde el archivo .env
 
-process.loadEnvFile();
+// process.loadEnvFile();
 
-app.listen(process.env.PUERTO, () => {
-  console.log('Servidor OK en puerto', process.env.PUERTO);
-});
+// app.listen(process.env.PUERTO, () => {
+//   console.log('Servidor OK en puerto', process.env.PUERTO);
+// });
 
-console.log('process.env.PUERTO:', process.env.PUERTO);
+// console.log('process.env.PUERTO:', process.env.PUERTO);
