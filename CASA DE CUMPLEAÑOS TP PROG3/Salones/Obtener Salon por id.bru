@@ -1,0 +1,16 @@
+meta {
+  name: Obtener Salon por id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{apiUrl}}/api/v1/salones/3
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -116,4 +116,27 @@ export default class SalonesControlador {
             });
         }
     }
+
+    eliminar = async (req, res) => {
+        try {
+            const salon_id = req.params.salon_id;  
+            const eliminado = await this.salonesServicio.eliminar(salon_id);
+            if (!eliminado) {
+                return res.status(404).json({
+                    estado: false,
+                    mensaje: 'Salón no encontrado para ser eliminado.'
+                })
+            }   
+            res.json({
+                estado: true, 
+                mensaje: 'Salón eliminado!'
+            }); 
+        } catch (err) {
+            console.log('Error en DELETE /salones/:salon_id', err);
+            res.status(500).json({
+                estado: false,
+                mensaje: 'Error interno del servidor.'
+            });
+        }   
+    }
 }
