@@ -1,21 +1,21 @@
 meta {
   name: Modificar salon
   type: http
-  seq: 6
+  seq: 2
 }
 
 put {
-  url: {{apiUrl}}/salones/9
+  url: {{apiUrl}}/api/v1/salones/10
   body: json
   auth: inherit
 }
 
 body:json {
   {
-      "titulo":"Epic Jham",
-      "direccion":"Brasil 531",
-      "capacidad":100,
-      "importe":80000
+      "titulo":"Modificado",
+      "direccion":"Mitre 531",
+      "capacidad":200,
+      "importe":140000
   }
 }
 

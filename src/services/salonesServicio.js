@@ -25,4 +25,8 @@ export default class SalonesServicio {
     crear = async (salon) => {
         return await this.salones.crear(salon);
     }
+
+     eliminar = async (salon_id) => {
+        return await this.salones.eliminar(salon_id);
+    }
 }

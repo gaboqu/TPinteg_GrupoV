@@ -1,0 +1,34 @@
+meta {
+  name: Crear Reserva
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{apiUrl}}/api/v1/reservas/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "fecha_reserva": "2025-11-20",
+      "salon_id": 1,
+      "usuario_id": 3,
+      "turno_id": 2,
+      "foto_cumpleaniero": "https://miweb.com/uploads/nino1.png",
+      "tematica": "Mario Bros",
+      "importe_salon": 55000,
+      "importe_total": 72000,
+      "servicios": [
+          { "servicio_id": 1, "importe": 6000 },
+          { "servicio_id": 4, "importe": 11000 }
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

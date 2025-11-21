@@ -1,11 +1,11 @@
 meta {
-  name: Obtener salones activos
+  name: Eliminar salon
   type: http
   seq: 3
 }
 
-get {
-  url: {{apiUrl}}/api/v1/salones
+delete {
+  url: {{apiUrl}}/api/v1/salones/9
   body: none
   auth: inherit
 }
